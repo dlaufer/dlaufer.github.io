@@ -31,17 +31,16 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
-
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
 disqus: dan-laufer
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-51021528-4
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:
+url: http://dlaufer.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -70,12 +69,12 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  style: :expanded # You might prefer to minify using :compressed / :expanded
 
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem  
 
 # Exclude these files from your production _site
 exclude:
