@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: Daniel Laufer
+name: Off R Rockers
 
 # Short bio or description (displayed in the header)
-description: Web Developer from Philadelphia
+description: Classic Rock and More
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
@@ -21,7 +21,7 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: dlaufer/dlaufer.github.io
+  github: 
   instagram:
   linkedin:
   pinterest:
@@ -74,7 +74,7 @@ sass:
 # Use the following plug-ins
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem  
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
 # Exclude these files from your production _site
 exclude:
