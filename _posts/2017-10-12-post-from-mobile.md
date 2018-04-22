@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: gig
 title: post from mobile
 ---
 this is a post from mobile. yesssss.
