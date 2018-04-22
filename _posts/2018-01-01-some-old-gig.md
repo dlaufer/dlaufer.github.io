@@ -1,7 +1,8 @@
 ---
 layout: gig
-title: Some Old Gig
+title: Site Still Under Construction
 ---
-**When:** 01/01/18 @ 7:00 PM
 
-We played. We saw. We conquered.
+Please bear with us as this site us still a work in progress.
+
+If you would like more info, please reach our to us at info@offrrockers.com.
