@@ -17,3 +17,9 @@
 
 @import "highlights";
 @import "svg-icons";
+
+.banner {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
