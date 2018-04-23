@@ -4,10 +4,6 @@ title: The Band
 permalink: /the-band/
 ---
 
-### Fred
-
-Guitar, Harmonica, Vocals
-
 ### Fran
 
 Guitar, Vocals
@@ -15,6 +11,10 @@ Guitar, Vocals
 ### Frank
 
 Bass, Vocals
+
+### Fred
+
+Guitar, Harmonica, Vocals
 
 ### Scott
 
