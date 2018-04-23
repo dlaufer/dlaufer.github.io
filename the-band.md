@@ -19,7 +19,3 @@ Bass, Vocals
 ### Scott
 
 Drums
-
-### Wanna book Off R Rockers?
-
-Contact Us: [info@offrrockers.com](mailto:info@offrrockers.com)
