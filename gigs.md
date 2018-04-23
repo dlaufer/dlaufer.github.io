@@ -6,11 +6,11 @@ permalink: /gigs/
 
 ### Upcoming Gigs
 
-Gigs
+Coming soon...
 
 ### Past Gigs
 
-Gigs
+Coming soon...
 
 ### Wanna book Off R Rockers?
 

@@ -6,8 +6,8 @@ permalink: /media/
 
 ### Video
 
-Video
+Coming soon...
 
 ### Pictures
 
-Pic
+Coming soon...

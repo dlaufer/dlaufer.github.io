@@ -10,12 +10,27 @@
   margin-bottom: 50px;
 }
 
+.logo.wrapper-masthead {
+  @include mobile {
+    margin-bottom: 0px;
+  }
+}
+
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
 
   @include mobile {
     text-align: center;
+    border-bottom: none;
+  }
+}
+
+#main .masthead {
+  display: none;
+
+  @include mobile {
+    display: block;
   }
 }
 

@@ -4,22 +4,22 @@ title: The Band
 permalink: /the-band/
 ---
 
-### Fred Laufer
+### Fred
 
 Guitar, Harmonica, Vocals
 
-### Fred Laufer
+### Fran
 
-Guitar, Harmonica, Vocals
+Guitar, Vocals
 
-### Fred Laufer
+### Frank
 
-Guitar, Harmonica, Vocals
+Bass, Vocals
 
-### Fred Laufer
+### Scott
 
-Guitar, Harmonica, Vocals
+Drums
 
-### Contact me
+### Wanna book Off R Rockers?
 
-[email@domain.com](mailto:email@domain.com)
+Contact Us: [info@offrrockers.com](mailto:info@offrrockers.com)
