@@ -1,7 +1,7 @@
 ---
 layout: page
-title: The Band
-permalink: /the-band/
+title: About Us
+permalink: /about-us/
 ---
 
 ### Fran
