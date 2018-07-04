@@ -53,11 +53,13 @@
 
 .site-info {
   float: left;
+  max-width: 30%;
 
   @include mobile {
     float: none;
     display: block;
     margin: 0 auto;
+    max-width: none;
   }
 }
 
