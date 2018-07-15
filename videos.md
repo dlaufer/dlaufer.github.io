@@ -4,16 +4,10 @@ title: Videos
 permalink: /videos/
 ---
 ### Hey Joe
-<div class="video-responsive">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZbjBxue_0PQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+{% include youtube-video.html id="ZbjBxue_0PQ" %}
 
 ### Secret Agent Man
-<div class="video-responsive">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/2khR2CEEGcU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+{% include youtube-video.html id="2khR2CEEGcU" %}
 
 ### Roadhouse blues
-<div class="video-responsive">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/eDnkzZWdF9w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
+{% include youtube-video.html id="eDnkzZWdF9w" %}
