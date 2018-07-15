@@ -4,10 +4,21 @@ title: Shows
 permalink: /shows/
 ---
 
-### Going to Rock
+# Upcoming Shows
 
 Coming soon...
 
-### Already Rocked
+# Past Shows
 
-Coming soon...
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+    </article>
+  {% endfor %}
+</div>
