@@ -83,3 +83,20 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "gig"
+
+# https://www.rubydoc.info/gems/jekyll-admin/0.8.0
+# jekyll_admin:
+#   hidden_links:
+#     - posts
+#     - pages
+#     - staticfiles
+#     - datafiles
+#     - configuration

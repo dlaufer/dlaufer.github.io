@@ -1,6 +1,6 @@
 ---
-layout: gig
 title: Quakertown Farmers Market
+date:   2018-05-06
 ---
 **When:** 05/06/18 @ 11:30 AM
 
