@@ -1,11 +1,11 @@
 ---
 title: Quakertown Farmers Market
-date:   2018-05-06
+layout: gig
+date: '2018-05-06'
+time: '11:30 AM'
+location: 'quakertown%20farmers%20market'
+description: "Off R Rockers will be rockin' the Quakertown Farmers Market on 05/06/18 starting at 11:30 AM. Come enjoy some classic rock and blues while getting your Q-Mart on!"
 ---
-**When:** 05/06/18 @ 11:30 AM
-
-Off R Rockers will be rockin' the Quakertown Farmers Market on 05/06/18 starting at 11:30 AM. Come enjoy some classic rock and blues while getting your Q-Mart on!
-
 ### Hey Joe
 {% include youtube-video.html id="ZbjBxue_0PQ" %}
 

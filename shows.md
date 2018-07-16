@@ -3,13 +3,6 @@ layout: page
 title: Shows
 permalink: /shows/
 ---
-
-# Upcoming Shows
-
-Coming soon...
-
-# Past Shows
-
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
