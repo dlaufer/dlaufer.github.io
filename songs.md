@@ -1,6 +1,6 @@
 ---
 layout: page
-title:
+title: Songs
 permalink: /songs/
 ---
 {% include music-player.html %}
