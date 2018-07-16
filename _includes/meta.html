@@ -3,12 +3,14 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
+    <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+
     {% if page.title %}
-    <meta name="description" content="{{ page.title| strip_html }} | {{ site.name }} - {{ site.description }}" />
-    <meta property="og:description" content="{{ page.title| strip_html }} | {{ site.name }} - {{ site.description }}" />
+    <meta name="description" content="{{ page.title| strip_html }} | {{ site.name }} - {{ site.description | truncate: 160 }}" />
+    <meta property="og:description" content="{{ page.title| strip_html }} | {{ site.name }} - {{ site.description | truncate: 160 }}" />
     {% else %}
-    <meta name="description" content="{{ site.name }} - {{ site.description }}">
-    <meta property="og:description" content="{{ site.name }} - {{ site.description }}" />
+    <meta name="description" content="{{ site.name }} - {{ site.description | truncate: 160 }}">
+    <meta property="og:description" content="{{ site.name }} - {{ site.description | truncate: 160 }}" />
     {% endif %}
     <meta name="author" content="{{ site.name }}" />
 
@@ -16,8 +18,8 @@
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="twitter:title" content="{{ page.title }}" />
     {% else %}
-    <meta name="description" content="{{ site.name }} - {{ site.description }}">
-    <meta property="og:description" content="{{ site.name }} - {{ site.description }}" />
+    <meta property="og:title" content="{{ site.name }} - {{ site.description | truncate: 160 }}">
+    <meta property="twitter:title" content="{{ site.name }} - {{ site.description | truncate: 160 }}" />
     {% endif %}
 
     <!--[if lt IE 9]>
@@ -26,7 +28,7 @@
 
     <link rel="stylesheet" type="text/css" href="../css/foundation.min.css"/>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description | truncate: 160 }}" href="{{ site.baseurl }}/feed.xml" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
