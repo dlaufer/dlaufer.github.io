@@ -9,29 +9,33 @@
 (function () {
 
   // ── DOM refs ────────────────────────────────────────────────────────────────
-  const wrap       = document.getElementById('game-wrap');
-  const skyEl      = document.getElementById('sky');
-  const farWrapEl  = document.getElementById('far-wrap');
-  const farInnerEl = document.getElementById('far-inner');
-  const midWrapEl  = document.getElementById('mid-wrap');
-  const midInnerEl = document.getElementById('mid-inner');
-  const sidewalkEl = document.getElementById('sidewalk');
-  const swInnerEl  = document.getElementById('sw-inner');
-  const roadEl     = document.getElementById('road');
-  const roadInnerEl= document.getElementById('road-inner');
-  const fgWrapEl   = document.getElementById('fg-wrap');
-  const fgInnerEl  = document.getElementById('fg-inner');
-  const charEl     = document.getElementById('character');
-  const charHead   = document.getElementById('char-head');
-  const charBody   = document.getElementById('char-body');
-  const charLegs   = document.getElementById('char-legs');
-  const legL       = document.getElementById('leg-l');
-  const legR       = document.getElementById('leg-r');
-  const hudEl      = document.getElementById('hud');
+  const wrap        = document.getElementById('game-wrap');
+  const skyEl       = document.getElementById('sky');
+  const farWrapEl   = document.getElementById('far-wrap');
+  const farInnerEl  = document.getElementById('far-inner');
+  const midWrapEl   = document.getElementById('mid-wrap');
+  const midInnerEl  = document.getElementById('mid-inner');
+  const sidewalkEl  = document.getElementById('sidewalk');
+  const swInnerEl   = document.getElementById('sw-inner');
+  const roadEl      = document.getElementById('road');
+  const roadInnerEl = document.getElementById('road-inner');
+  const fgWrapEl    = document.getElementById('fg-wrap');
+  const fgInnerEl   = document.getElementById('fg-inner');
+  const charEl      = document.getElementById('character');
+  const charHead    = document.getElementById('char-head');
+  const charBody    = document.getElementById('char-body');
+  const charLegs    = document.getElementById('char-legs');
+  const legL        = document.getElementById('leg-l');
+  const legR        = document.getElementById('leg-r');
+  const hudEl       = document.getElementById('hud');
 
   // ── State ───────────────────────────────────────────────────────────────────
-  let worldX = 0;   // raw accumulated scroll offset — never reset, grows forever
-  let SPEED  = BASE_SPEED;
+  let worldX  = 0;   // character-driven world scroll — never reset
+  let cloudX  = 0;   // independent cloud scroll — never reset
+  let SPEED   = BASE_SPEED;
+
+  // cloudInnerEl is returned by buildSky so we can drive it every frame
+  let cloudInnerEl = null;
 
   // ── Helpers ─────────────────────────────────────────────────────────────────
   function getScale(H) {
@@ -40,13 +44,15 @@
 
   // ── Init ────────────────────────────────────────────────────────────────────
   function init() {
-    const H = window.innerHeight;
+    const H     = window.innerHeight;
     const scale = getScale(H);
     SPEED = BASE_SPEED * scale;
 
     initInput(wrap);
 
-    buildSky(skyEl, H);
+    // buildSky now returns the cloud inner element
+    cloudInnerEl = buildSky(skyEl, H);
+
     buildFarBuildings(farInnerEl, farWrapEl, H);
     buildMidBuildings(midInnerEl, midWrapEl, H, Math.max(6, Math.round(6 * scale)));
     buildStreet(roadInnerEl, swInnerEl, sidewalkEl, roadEl, H);
@@ -60,7 +66,7 @@
 
   // ── Resize ──────────────────────────────────────────────────────────────────
   function onResize() {
-    const H = window.innerHeight;
+    const H     = window.innerHeight;
     const scale = getScale(H);
     SPEED = BASE_SPEED * scale;
 
@@ -81,17 +87,23 @@
     const movingRight = input.right;
     const movingLeft  = input.left;
     const moving      = movingRight || movingLeft;
+    const dir         = movingRight ? 1 : movingLeft ? -1 : 0;
 
+    // Character-driven world scroll
     if (movingRight) worldX -= SPEED;
     if (movingLeft)  worldX += SPEED;
 
-    const dir = movingRight ? 1 : movingLeft ? -1 : 0;
+    // Clouds drift on their own — always advancing regardless of input
+    cloudX += CLOUD_SPEED;
 
-    // Scroll all layers
+    // Scroll world layers
     scrollFarBuildings(farInnerEl, worldX);
     scrollMidBuildings(midInnerEl, worldX);
     scrollStreet(roadInnerEl, swInnerEl, worldX);
     scrollForeground(fgInnerEl, worldX);
+
+    // Scroll clouds independently
+    scrollClouds(cloudInnerEl, cloudX);
 
     // Animate character
     updateCharacter(moving, dir, charEl, legL, legR);
