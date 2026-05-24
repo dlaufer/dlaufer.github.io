@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>8-bit Street Mobile</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>8-bit Street</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="game-wrap" tabindex="0">
+
     <div id="sky"></div>
 
     <div class="layer-wrap" id="far-wrap">
       <div class="layer-inner" id="far-inner"></div>
     </div>
+
     <div class="layer-wrap" id="mid-wrap">
       <div class="layer-inner" id="mid-inner"></div>
     </div>
@@ -22,7 +24,7 @@
     </div>
 
     <div id="road">
-      <div class="layer-inner" id="road-inner"></div>
+      <div id="road-inner"></div>
     </div>
 
     <div class="layer-wrap" id="fg-wrap">
@@ -44,8 +46,20 @@
       <div class="touch-btn" id="btn-left">&#9664;</div>
       <div class="touch-btn" id="btn-right">&#9654;</div>
     </div>
+
   </div>
 
-  <script src="script.js"></script>
+  <!-- Load order matters: constants and utilities first, then modules, then main -->
+  <script src="js/constants.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/sky.js"></script>
+  <script src="js/buildings-far.js"></script>
+  <script src="js/buildings-mid.js"></script>
+  <script src="js/street.js"></script>
+  <script src="js/foreground.js"></script>
+  <script src="js/character.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
