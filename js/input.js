@@ -10,14 +10,15 @@ const input = {
 function initInput(wrapEl) {
   // ── Keyboard ──────────────────────────────────────────────────────────────
   document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowLeft')  { input.left  = true; e.preventDefault(); }
-    if (e.key === 'ArrowRight') { input.right = true; e.preventDefault(); }
+    console.log('keydown', e.key);
+    if (e.key === 'ArrowLeft' || e.key === 'a')  { input.left  = true; e.preventDefault(); }
+    if (e.key === 'ArrowRight' || e.key === 'd') { input.right = true; e.preventDefault(); }
     wrapEl.focus();
   });
 
   document.addEventListener('keyup', e => {
-    if (e.key === 'ArrowLeft')  input.left  = false;
-    if (e.key === 'ArrowRight') input.right = false;
+    if (e.key === 'ArrowLeft' || e.key === 'a')  input.left  = false;
+    if (e.key === 'ArrowRight' || e.key === 'd') input.right = false;
   });
 
   wrapEl.addEventListener('click', () => wrapEl.focus());
