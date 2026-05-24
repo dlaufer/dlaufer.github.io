@@ -9,7 +9,7 @@ html, body {
 
 /* ── Viewport ──────────────────────────────────────────────────────────── */
 #game-wrap {
-    width: 100vw; height: 100vh;
+    width: 100vw; height: 100svh;
     overflow: hidden;
     position: relative;
     background: #5b8dd9;
