@@ -46,16 +46,16 @@
 
 function buildFarBuildings(farInnerEl, farWrapEl, H) {
   farInnerEl.innerHTML = '';
+  // center the image in the frame
   farInnerEl.style.cssText = `
     position: absolute;
     bottom: 0;
-    left: 20%;
-    width: 2000px;
+    left: -20%;
+    width: 1000px;
     height: 100%;
-    background-color: yellow;
     background-image: url('images/wholecity.png');
     background-repeat: no-repeat;
-    background-position: bottom left;
+    background-position: bottom center;
     background-size: auto 100%;
     image-rendering: pixelated;
   `;
@@ -79,5 +79,5 @@ function layoutFarBuildings(farWrapEl, H) {
  * @param {number} worldX
  */
 function scrollFarBuildings(farInnerEl, worldX) {
-  farInnerEl.style.transform = `translateX(${layerX(worldX, FAR_SPEED, FAR_W)}px)`;
+  farInnerEl.style.transform = `translateX(${scrollWithNoRepeat(worldX, FAR_SPEED)}px)`;
 }

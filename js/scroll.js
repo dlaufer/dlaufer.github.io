@@ -21,3 +21,7 @@ function posMod(n, m) {
 function layerX(worldX, speed, tileW) {
   return -posMod(-(worldX * speed), tileW);
 }
+
+function scrollWithNoRepeat(worldX, speed) {
+  return worldX * speed;
+}

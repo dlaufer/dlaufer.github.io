@@ -26,5 +26,5 @@ const ROAD_HEIGHT_FRAC = 0.28;
 const BASE_SPEED = 2.5;
 
 // ─── Maximum left / right distance to scroll ──────────────────────────────────
-const MAX_LEFT_DISTANCE = 4000;
-const MAX_RIGHT_DISTANCE = -6000;
+const MAX_LEFT_DISTANCE = 2000;
+const MAX_RIGHT_DISTANCE = -4000;
