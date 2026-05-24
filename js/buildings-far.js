@@ -49,9 +49,8 @@ function buildFarBuildings(farInnerEl, farWrapEl, H) {
   // center the image in the frame
   farInnerEl.style.cssText = `
     position: absolute;
-    bottom: 0;
-    left: -20%;
-    width: 1000px;
+    inset: 0;
+    margin: auto;
     height: 100%;
     background-image: url('images/wholecity.png');
     background-repeat: no-repeat;
