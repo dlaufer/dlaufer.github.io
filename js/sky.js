@@ -2,7 +2,8 @@
 // Static sky backdrop with randomly generated clouds that drift independently
 // of character movement.
 
-const CLOUD_SPEED = 0.30;  // px per frame
+// TODO: make cloud speed absolute, not dependent on screen width
+const CLOUD_SPEED = 0.18;  // px per frame
 const CLOUD_W     = 3200;  // tile width for the cloud strip
 const CLOUD_COUNT = 14;    // how many clouds per tile
 
