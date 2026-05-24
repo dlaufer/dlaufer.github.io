@@ -8,7 +8,7 @@ const SW_W   = 3840;   // sidewalk marks, same period as road
 const FG_W   = 2880;   // 24 lampposts × 120 px
 
 // ─── Parallax multipliers ──────────────────────────────────────────────────────
-const FAR_SPEED  = 0.25;
+const FAR_SPEED  = 0.1;
 const MID_SPEED  = 0.70;
 const ROAD_SPEED = 1.00;
 const SW_SPEED   = 1.00;
@@ -24,3 +24,7 @@ const ROAD_HEIGHT_FRAC = 0.28;
 
 // ─── Walk speed (px per frame at base scale) ──────────────────────────────────
 const BASE_SPEED = 2.5;
+
+// ─── Maximum left / right distance to scroll ──────────────────────────────────
+const MAX_LEFT_DISTANCE = 4000;
+const MAX_RIGHT_DISTANCE = -6000;

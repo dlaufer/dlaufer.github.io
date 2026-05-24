@@ -84,14 +84,15 @@
 
   // ── Game loop ────────────────────────────────────────────────────────────────
   function loop() {
-    const movingRight = input.right;
-    const movingLeft  = input.left;
+    const movingRight = (worldX > MAX_RIGHT_DISTANCE) && input.right;
+    const movingLeft  = (worldX < MAX_LEFT_DISTANCE) && input.left;
+    
     const moving      = movingRight || movingLeft;
     const dir         = movingRight ? 1 : movingLeft ? -1 : 0;
 
     // Character-driven world scroll
     if (movingRight) worldX -= SPEED;
-    if (movingLeft)  worldX += SPEED;
+    if (movingLeft) worldX += SPEED;
 
     // Clouds drift on their own — always advancing regardless of input
     cloudX += CLOUD_SPEED;
