@@ -28,3 +28,7 @@ const BASE_SPEED = 2.5;
 // ─── Maximum left / right distance to scroll ──────────────────────────────────
 const MAX_LEFT_DISTANCE = 2000;
 const MAX_RIGHT_DISTANCE = -4000;
+
+// ─── Building entry proximity (px from screen center) ─────────────────────────
+// How close the character must be to a door before the prompt appears.
+const ENTRY_THRESHOLD = 60;

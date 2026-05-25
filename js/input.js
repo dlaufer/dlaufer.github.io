@@ -10,7 +10,6 @@ const input = {
 function initInput(wrapEl) {
   // ── Keyboard ──────────────────────────────────────────────────────────────
   document.addEventListener('keydown', e => {
-    console.log('keydown', e.key);
     if (e.key === 'ArrowLeft' || e.key === 'a')  { input.left  = true; e.preventDefault(); }
     if (e.key === 'ArrowRight' || e.key === 'd') { input.right = true; e.preventDefault(); }
     wrapEl.focus();

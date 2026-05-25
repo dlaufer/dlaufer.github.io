@@ -42,6 +42,11 @@
     return Math.min(H / 420, 2);
   }
 
+  // promptBottomY: the prompt floats just above the sidewalk top edge
+  function promptBottom(H) {
+    return Math.round(H * (SW_BOTTOM_FRAC + SW_HEIGHT_FRAC)) + 8;
+  }
+
   // ── Init ────────────────────────────────────────────────────────────────────
   function init() {
     const H     = window.innerHeight;
@@ -49,6 +54,7 @@
     SPEED = BASE_SPEED * scale;
 
     initInput(wrap);
+    initProximity(wrap);
 
     // buildSky now returns the cloud inner element
     cloudInnerEl = buildSky(skyEl, H);
@@ -108,6 +114,14 @@
 
     // Animate character
     updateCharacter(moving, dir, charEl, legL, legR);
+
+    // Proximity check — runs every frame, cheap
+    updateProximity(
+      worldX,
+      window.innerWidth,
+      window.innerHeight,
+      promptBottom(window.innerHeight)
+    );
 
     requestAnimationFrame(loop);
   }
