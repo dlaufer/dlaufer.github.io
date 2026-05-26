@@ -91,7 +91,6 @@ function updateProximity(worldX, screenW, screenH, promptBottomY) {
     [0, MID_W].forEach(tileOffset => {
       const screenX = baseShift + b.doorWorldX + tileOffset;
       const dist    = Math.abs(screenX - center);
-      console.log("Distance to ", b.label, " is ", dist);
       if (dist < closestDist) {
         closestDist = dist;
         closest     = { ...b, screenX };
@@ -100,7 +99,6 @@ function updateProximity(worldX, screenW, screenH, promptBottomY) {
   });
 
   if (closest && closestDist < ENTRY_THRESHOLD) {
-    console.log("We are in proximity of ", closest.label);
     currentUrl = closest.url;
     entryLocked = false;
 
